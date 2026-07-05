@@ -57,17 +57,29 @@ try {
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang Quản Trị - Hệ Thống Bán Đồ Ăn</title>
+    <title>QFood Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 <body class="bg-light">
     <div class="container mt-5">
         <div class="card p-4 shadow-sm">
-            <h1 class="text-danger fw-bold">👑 TRANG QUẢN TRỊ ADMIN 👑</h1>
-            <p class="lead">Chào mừng, <b><?= htmlspecialchars($_SESSION['user']['fullname']) ?></b> đã đăng nhập thành công!</p>
-            <hr>
-            <hr>
+          <div class="admin-header">
+    <div>
+        <h1>🍔 QFood Dashboard</h1>
+        <p>Xin chào,
+            <strong><?= htmlspecialchars($_SESSION['user']['fullname']) ?></strong>
+        </p>
+    </div>
+
+    <div>
+        <span class="badge bg-success fs-6 px-3 py-2">
+            Administrator
+        </span>
+    </div>
+</div>
+
+<hr>
             <?php if (isset($_SESSION['success_msg'])): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     ✨ <?= $_SESSION['success_msg']; unset($_SESSION['success_msg']); ?>
@@ -79,18 +91,32 @@ try {
                 </div>
             <?php endif; ?>
 
-            <div class="d-flex justify-content-between align-items-center mb-3 mt-3">
-    <h4 class="text-secondary fw-bold m-0">Danh Sách Món Ăn</h4>
-    <div>
-        <a href="../index.php" class="btn btn-outline-dark me-2">⬅ Về Trang Chủ</a>
-        <a href="orders.php" class="btn btn-primary me-2">Xem Đơn Hàng Khách Đặt</a>
-        <a href="add.php" class="btn btn-success">+ Thêm Món Mới</a>
-    </div>
+           <div class="admin-toolbar">
+   <h4>📋 Danh sách sản phẩm</h4>
+
+<div>
+
+<a href="../index.php"
+class="btn btn-dark rounded-pill me-2">
+🏠 Trang chủ
+</a>
+
+<a href="orders.php"
+class="btn btn-info text-white rounded-pill me-2">
+📦 Đơn hàng
+</a>
+
+<a href="add.php"
+class="btn btn-success rounded-pill">
+➕ Thêm sản phẩm
+</a>
+
+</div>
 </div>
 
             <div class="table-responsive">
                 <table class="table table-bordered table-hover align-middle text-center small">
-                    <thead class="table-warning">
+                   <thead class="table-success">
                         <tr>
                             <th>ID</th>
                             <th>Ảnh</th>
@@ -114,8 +140,8 @@ try {
                                     <td class="text-start fw-bold"><?= htmlspecialchars($pro['name']) ?></td>
                                     <td class="text-danger fw-bold"><?= number_format($pro['price'], 0, ',', '.') ?> đ</td>
                                     <td>
-                                        <a href="edit_product.php?id=<?= $pro['id'] ?>" class="btn btn-warning btn-sm py-0">Sửa</a>
-                                        <a href="index.php?action=delete&id=<?= $pro['id'] ?>" class="btn btn-danger btn-sm py-0" onclick="return confirm('Bạn có chắc chắn muốn xóa món ăn này không?')">Xóa</a>
+                                        <a href="edit_product.php?id=<?= $pro['id'] ?>" class="class="btn btn-outline-primary btn-sm rounded-pill">Sửa</a>
+                                        <a href="index.php?action=delete&id=<?= $pro['id'] ?>" class="class="btn btn-outline-primary btn-sm rounded-pill" onclick="return confirm('Bạn có chắc chắn muốn xóa món ăn này không?')">Xóa</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -125,7 +151,7 @@ try {
                     </tbody>
                 </table>
             </div>
-            <a href="../logout.php" class="btn btn-dark mt-3">Đăng xuất hệ thống</a>
+            <a href="../logout.php" class="class="btn btn-danger rounded-pill mt-4 px-4">Đăng xuất hệ thống</a>
         </div>
     </div>
 </body>
