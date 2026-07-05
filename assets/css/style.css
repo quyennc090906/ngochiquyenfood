@@ -187,3 +187,73 @@ body{
 .btn:hover{
     transform:translateY(-2px);
 }
+/* ================= ADMIN DASHBOARD ================= */
+
+.admin-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.admin-header h1{
+    font-size:34px;
+    font-weight:700;
+    color:#16a34a;
+}
+
+.admin-header p{
+    color:#666;
+    margin:0;
+}
+
+.admin-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:25px 0;
+    flex-wrap:wrap;
+}
+
+.admin-toolbar h4{
+    font-weight:700;
+    color:#222;
+}
+
+.card{
+    border:none;
+    border-radius:20px;
+}
+
+.table{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table tbody tr:hover{
+    background:#eefcf4;
+}
+
+.table img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.btn{
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.table-success{
+    background:#16a34a !important;
+    color:white;
+}
+
+.badge{
+    border-radius:30px;
+}
