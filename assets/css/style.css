@@ -257,3 +257,114 @@ body{
 .badge{
     border-radius:30px;
 }
+/* ================= FOOTER ================= */
+
+.footer-custom{
+
+    background:#1f2937;
+
+    color:#fff;
+
+    padding:60px 0 20px;
+
+}
+
+.footer-logo{
+
+    color:#22c55e;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.footer-text{
+
+    color:#d1d5db;
+
+    line-height:1.8;
+
+}
+
+.footer-title{
+
+    margin-bottom:18px;
+
+    color:#22c55e;
+
+    font-weight:600;
+
+}
+
+.footer-menu{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer-menu li{
+
+    margin:12px 0;
+
+}
+
+.footer-menu a{
+
+    color:#d1d5db;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-menu a:hover{
+
+    color:#22c55e;
+
+    padding-left:8px;
+
+}
+
+.social-icon a{
+
+    width:42px;
+
+    height:42px;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#374151;
+
+    color:white;
+
+    border-radius:50%;
+
+    margin-right:8px;
+
+    transition:.3s;
+
+    text-decoration:none;
+
+}
+
+.social-icon a:hover{
+
+    background:#22c55e;
+
+    transform:translateY(-4px);
+
+}
+
+.footer-custom hr{
+
+    border-color:#4b5563;
+
+}
